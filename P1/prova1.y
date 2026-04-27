@@ -38,7 +38,6 @@ stmt_list
 stmt
 : IDENT ASSIGN expr
 | PRINT LPAREN exprlist RPAREN
-| IDENT LPAREN exprlist RPAREN
 | expr
 ;
 
@@ -51,6 +50,7 @@ expr
 : NUMBER
 | STRING
 | IDENT
+| IDENT LPAREN exprlist RPAREN
 | expr '+' expr
 | expr '-' expr
 | expr '*' expr
